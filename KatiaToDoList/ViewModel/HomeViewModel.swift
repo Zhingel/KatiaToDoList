@@ -51,25 +51,37 @@ class HomeViewModel : ObservableObject {
             }
         }
     }
-    func EditCheck(item: Task) {
+    
+    func writeCheck(context: NSManagedObjectContext) {
+        
+        //updating
+        if updateItem != nil {
+            updateItem.check = check
+            try! context.save()
+            updateItem = nil
+        }
+        
+    }
+   func EditCheck(item: Task) {
         updateItem = item
         check = item.check
-        
+
+
     }
     func isPressed(item: Task) {
         updateItem = item
         isPressed = item.isPressed
-        
+
     }
-   
-    func EditItem(item: Task) {
-        updateItem = item
-        colorIndex = item.colorIndex
-        toDo = item.toDo!
-        title = item.title!
-        isNewData.toggle()
-        
-    }
+
+//    func EditItem(item: Task) {
+//        updateItem = item
+//        colorIndex = item.colorIndex
+//        toDo = item.toDo!
+//        title = item.title!
+//        isNewData.toggle()
+//
+//    }
     func delete(context: NSManagedObjectContext, item: Task)  {
         context.delete(item)
         try! context.save()

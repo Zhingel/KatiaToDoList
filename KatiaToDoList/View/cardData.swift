@@ -12,8 +12,6 @@ struct cardData: View {
     @Environment(\.managedObjectContext) var context
     var data : Task!
     var body: some View {
-        
-           
                     HStack {
                         VStack(alignment: .leading) {
                             Text(data.title ?? "")
@@ -45,6 +43,7 @@ struct cardData: View {
                         Button(action: {data.check.toggle()
                             if data.check {
                                 homeData.EditCheck(item: data)
+                                homeData.writeCheck(context: context)
                             }
                         }) {
                             Image(systemName: data.check ? "checkmark.circle.fill" : "circle")
@@ -52,10 +51,6 @@ struct cardData: View {
                         }
                     }
                     .padding()
-               
-               
-                
-            
         }
 }
 

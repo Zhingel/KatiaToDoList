@@ -26,29 +26,36 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     habitBar(value: value)
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .padding(.horizontal)
-//                            .frame(width: .none, height: homeData.isNewData ? 270 + 1.1*homeData.containerHeight : 70)
-     //                       .animation(.linear)
-                        VStack {
-                        HStack {
-                            Spacer()
-                            Button(action: {homeData.isNewData.toggle()}, label: {
-                                Image(systemName: "plus")
-                                        .font(.largeTitle)
-                                    .foregroundColor(Color(red: 0.631, green: 0.086, blue: 0.8))
-                            })
-                 
-                            Spacer()
-                    }
-                        .padding()
+                
+                        
                         if homeData.isNewData {
-                            
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                                    .padding(.horizontal)
+        //                            .frame(width: .none, height: homeData.isNewData ? 270 + 1.1*homeData.containerHeight : 70)
+             //                       .animation(.linear)
+                                
+                            VStack {
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    if homeData.title == "" {
+                                        homeData.isNewData.toggle()
+                                    } else {
+                                        homeData.writeData(context: context)
+                                    }
+                                }, label: {
+                                    Image(systemName: "plus")
+                                            .font(.largeTitle)
+                                        .foregroundColor(Color(red: 0.631, green: 0.086, blue: 0.8))
+                                })
+                     
+                                Spacer()
+                        }
+                            .padding()
                                 TextField("Бегать по утрам, спать 8 часов и т.п.", text: $homeData.title)
-                                    
                                     .padding(15)
                                     .background(Color.white)
                                     .cornerRadius(10)
@@ -56,8 +63,6 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                                     .padding(.horizontal)
                                     .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
                                     .shadow(color: .black.opacity(0.08), radius: 5, x: -5, y: -5)
-                                    
-                                    
                             AutoSizingTF(homeData: homeData)
                                     .padding(.horizontal)
                                     .frame(height: homeData.containerHeight)
@@ -75,7 +80,6 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                                                     .font(.largeTitle)
                                                     .foregroundColor(homeData.colorArray[current])
                                             })
-                                            
                                             }
                                     Spacer()
                                 }
@@ -88,21 +92,28 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                                 .disabled(homeData.title == "" ? true : false)
                                 .opacity(homeData.title == "" ? 0.5 : 1)
                                 .padding(.top)
-
-                            }
-                           
-                            
+                            }.padding(.horizontal)
                         }
-                        .padding(.horizontal)
-                            
-                    }
+                        
+                        } else { ZStack {
+                            Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                                .padding(.horizontal)
+   
+                        HStack {
+                            Spacer()
+                            Button(action: {homeData.isNewData.toggle()}, label: {
+                                Image(systemName: "plus")
+                                        .font(.largeTitle)
+                                    .foregroundColor(Color(red: 0.631, green: 0.086, blue: 0.8))
+                            })
+                 
+                            Spacer()
+                        }.padding(.vertical)
+                        }}
                     
-                    
-
-            
                     ForEach(resuts) { task in
-                       
-                       
                             ZStack {
                                 Rectangle()
                                     .foregroundColor(Color.white)
@@ -121,28 +132,14 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                             .foregroundColor(homeData.colorArray[Int(task.colorIndex)])
                             .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
                             .shadow(color: .black.opacity(0.08), radius: 5, x: -5, y: -5)
-                           
-                            
-                            
-                      
                         }
-                   
-                   
                     }
-                        
                         .navigationTitle("Сегодня")
-                
-            
             }
-            }.onTapGesture {
-                
-                self.endTextEditing()
-          } 
+            }.onTapGesture {self.endTextEditing()}
         }
-        
-        }
-
     }
+}
 
 
 
