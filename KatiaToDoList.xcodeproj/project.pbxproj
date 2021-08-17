@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE16A38D26CA9839007B5171 /* openncard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE16A38C26CA9839007B5171 /* openncard.swift */; };
+		EE29A79B26C8DAC600FA2A63 /* cardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE29A79A26C8DAC600FA2A63 /* cardData.swift */; };
+		EED9A98C26C7E66600F23AF5 /* KatiaToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED9A98B26C7E66600F23AF5 /* KatiaToDoListApp.swift */; };
+		EED9A98E26C7E66600F23AF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED9A98D26C7E66600F23AF5 /* ContentView.swift */; };
+		EED9A99026C7E66800F23AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED9A98F26C7E66800F23AF5 /* Assets.xcassets */; };
+		EED9A99326C7E66800F23AF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED9A99226C7E66800F23AF5 /* Preview Assets.xcassets */; };
+		EED9A99526C7E66800F23AF5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED9A99426C7E66800F23AF5 /* Persistence.swift */; };
+		EED9A99826C7E66800F23AF5 /* KatiaToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EED9A99626C7E66800F23AF5 /* KatiaToDoList.xcdatamodeld */; };
+		EED9A9A226C7EA8700F23AF5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED9A9A126C7EA8700F23AF5 /* Home.swift */; };
+		EED9A9A426C7EAD500F23AF5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED9A9A326C7EAD500F23AF5 /* HomeViewModel.swift */; };
+		EED9A9A626C7F2C700F23AF5 /* habitBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED9A9A526C7F2C700F23AF5 /* habitBar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE16A38C26CA9839007B5171 /* openncard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openncard.swift; sourceTree = "<group>"; };
+		EE29A79A26C8DAC600FA2A63 /* cardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardData.swift; sourceTree = "<group>"; };
+		EED9A98826C7E66600F23AF5 /* KatiaToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KatiaToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED9A98B26C7E66600F23AF5 /* KatiaToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatiaToDoListApp.swift; sourceTree = "<group>"; };
+		EED9A98D26C7E66600F23AF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EED9A98F26C7E66800F23AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED9A99226C7E66800F23AF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EED9A99426C7E66800F23AF5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EED9A99726C7E66800F23AF5 /* KatiaToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KatiaToDoList.xcdatamodel; sourceTree = "<group>"; };
+		EED9A99926C7E66800F23AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED9A9A126C7EA8700F23AF5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EED9A9A326C7EAD500F23AF5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EED9A9A526C7F2C700F23AF5 /* habitBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitBar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EED9A98526C7E66600F23AF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EED9A97F26C7E66600F23AF5 = {
+			isa = PBXGroup;
+			children = (
+				EED9A98A26C7E66600F23AF5 /* KatiaToDoList */,
+				EED9A98926C7E66600F23AF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EED9A98926C7E66600F23AF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EED9A98826C7E66600F23AF5 /* KatiaToDoList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EED9A98A26C7E66600F23AF5 /* KatiaToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				EED9A9A026C7EA6000F23AF5 /* ViewModel */,
+				EED9A99F26C7EA4E00F23AF5 /* View */,
+				EED9A98B26C7E66600F23AF5 /* KatiaToDoListApp.swift */,
+				EED9A98D26C7E66600F23AF5 /* ContentView.swift */,
+				EED9A98F26C7E66800F23AF5 /* Assets.xcassets */,
+				EED9A99426C7E66800F23AF5 /* Persistence.swift */,
+				EED9A99926C7E66800F23AF5 /* Info.plist */,
+				EED9A99626C7E66800F23AF5 /* KatiaToDoList.xcdatamodeld */,
+				EED9A99126C7E66800F23AF5 /* Preview Content */,
+			);
+			path = KatiaToDoList;
+			sourceTree = "<group>";
+		};
+		EED9A99126C7E66800F23AF5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EED9A99226C7E66800F23AF5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EED9A99F26C7EA4E00F23AF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EED9A9A126C7EA8700F23AF5 /* Home.swift */,
+				EE29A79A26C8DAC600FA2A63 /* cardData.swift */,
+				EE16A38C26CA9839007B5171 /* openncard.swift */,
+				EED9A9A526C7F2C700F23AF5 /* habitBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EED9A9A026C7EA6000F23AF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EED9A9A326C7EAD500F23AF5 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EED9A98726C7E66600F23AF5 /* KatiaToDoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED9A99C26C7E66800F23AF5 /* Build configuration list for PBXNativeTarget "KatiaToDoList" */;
+			buildPhases = (
+				EED9A98426C7E66600F23AF5 /* Sources */,
+				EED9A98526C7E66600F23AF5 /* Frameworks */,
+				EED9A98626C7E66600F23AF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KatiaToDoList;
+			productName = KatiaToDoList;
+			productReference = EED9A98826C7E66600F23AF5 /* KatiaToDoList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EED9A98026C7E66600F23AF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					EED9A98726C7E66600F23AF5 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = EED9A98326C7E66600F23AF5 /* Build configuration list for PBXProject "KatiaToDoList" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EED9A97F26C7E66600F23AF5;
+			productRefGroup = EED9A98926C7E66600F23AF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EED9A98726C7E66600F23AF5 /* KatiaToDoList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EED9A98626C7E66600F23AF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED9A99326C7E66800F23AF5 /* Preview Assets.xcassets in Resources */,
+				EED9A99026C7E66800F23AF5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EED9A98426C7E66600F23AF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED9A99526C7E66800F23AF5 /* Persistence.swift in Sources */,
+				EED9A9A426C7EAD500F23AF5 /* HomeViewModel.swift in Sources */,
+				EED9A98E26C7E66600F23AF5 /* ContentView.swift in Sources */,
+				EED9A9A226C7EA8700F23AF5 /* Home.swift in Sources */,
+				EED9A99826C7E66800F23AF5 /* KatiaToDoList.xcdatamodeld in Sources */,
+				EE29A79B26C8DAC600FA2A63 /* cardData.swift in Sources */,
+				EED9A98C26C7E66600F23AF5 /* KatiaToDoListApp.swift in Sources */,
+				EED9A9A626C7F2C700F23AF5 /* habitBar.swift in Sources */,
+				EE16A38D26CA9839007B5171 /* openncard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EED9A99A26C7E66800F23AF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EED9A99B26C7E66800F23AF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EED9A99D26C7E66800F23AF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KatiaToDoList/Preview Content\"";
+				DEVELOPMENT_TEAM = 9C3YYD2ZUU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KatiaToDoList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZhingelStas.KatiaToDoList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EED9A99E26C7E66800F23AF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KatiaToDoList/Preview Content\"";
+				DEVELOPMENT_TEAM = 9C3YYD2ZUU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KatiaToDoList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZhingelStas.KatiaToDoList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EED9A98326C7E66600F23AF5 /* Build configuration list for PBXProject "KatiaToDoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED9A99A26C7E66800F23AF5 /* Debug */,
+				EED9A99B26C7E66800F23AF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED9A99C26C7E66800F23AF5 /* Build configuration list for PBXNativeTarget "KatiaToDoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED9A99D26C7E66800F23AF5 /* Debug */,
+				EED9A99E26C7E66800F23AF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EED9A99626C7E66800F23AF5 /* KatiaToDoList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EED9A99726C7E66800F23AF5 /* KatiaToDoList.xcdatamodel */,
+			);
+			currentVersion = EED9A99726C7E66800F23AF5 /* KatiaToDoList.xcdatamodel */;
+			path = KatiaToDoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EED9A98026C7E66600F23AF5 /* Project object */;
+}
