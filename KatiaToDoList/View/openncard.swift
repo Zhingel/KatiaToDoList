@@ -13,17 +13,27 @@ struct openncard: View {
     var data : Task!
     var body: some View {
                     HStack {
+                        VStack {
+                            Image("\(Int(data.colorIndex))")
+                                .resizable()
+                                .frame(width: 100, height:100)
+                                .cornerRadius(10)
+                            Spacer()
+                        }
+                          //  .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
+                            //    .shadow(color: .black.opacity(0.08), radius: 5, x: -5, y: -5)
+                        
                         VStack(alignment: .leading) {
                             Text(data.title ?? "")
                                 .font(.headline)
                             Spacer()
                             if data.toDo != "Edit text" && data.toDo != ""{
                                 Text(data.toDo ?? "")
-                                    .padding(.horizontal)
+                                  //  .padding(.horizontal)
                                     .frame(height: 20)
                                     .background(Color.white)
                                     .cornerRadius(10)
-                                    .padding()
+                                    .padding(.bottom, 60)
                             }
       //                            AutoSizingTF(homeData: homeData)
 //                                    .padding(.horizontal)

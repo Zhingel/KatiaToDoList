@@ -18,7 +18,7 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
     @StateObject var homeData = HomeViewModel()
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "check", ascending: true)], animation: .spring()) var resuts: FetchedResults<Task>
-    
+    @GestureState var isDragging = false
     var body: some View {
         NavigationView {
             ZStack{
@@ -76,9 +76,16 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                                             Button(action: {
                                                 homeData.colorIndex = Double(current)
                                             }, label: {
-                                                Image(systemName: homeData.colorIndex == Double(current) ? "largecircle.fill.circle":"circle.fill")
-                                                    .font(.largeTitle)
-                                                    .foregroundColor(homeData.colorArray[current])
+//                                                Image(systemName: homeData.colorIndex == Double(current) ? "largecircle.fill.circle":"circle.fill")
+//                                                    .font(.largeTitle)
+//                                                    .foregroundColor(homeData.colorArray[current])
+                                                Image("\(current)")
+                                                    .resizable()
+                                                    .clipShape(Circle())
+                                                    .frame(width: 50 , height: 50)
+                                                    .overlay(  homeData.colorIndex == Double(current) ? Circle().stroke(Color.black, lineWidth: 3) : Circle().stroke(homeData.colorArray[current], lineWidth: 3))
+                                                    .opacity(homeData.colorIndex == Double(current) ? 0.5 : 1)
+                                                    
                                             })
                                             }
                                     Spacer()
@@ -114,29 +121,69 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                         }}
                     
                     ForEach(resuts) { task in
+                        ZStack {
+                            Color.red
+                                .cornerRadius(10)
+                                .padding(.horizontal)
+                                .padding(.vertical,5)
+                            HStack {
+                                Spacer()
+                                Button(action: {homeData.delete(context: context, item: task)}
+                                       , label: {
+                                    Image(systemName: "xmark.bin.fill")
+                                        .font(.title)
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal,40)
+                                })
+                            }
                             ZStack {
-                                Rectangle()
-                                    .foregroundColor(Color.white)
-                        if task.isPressed {
-                            cardData(data: task)
-                        } else {
-                            openncard(data: task)
-                        }
-                            }
-                            .cornerRadius(10)
-                            .padding(.horizontal)
-                            .padding(.vertical,5)
-                            .onTapGesture {
-                                task.isPressed.toggle()
-                            }
-                            .foregroundColor(homeData.colorArray[Int(task.colorIndex)])
-                            .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
+                                    Rectangle()
+                                        .foregroundColor(Color.white)
+                                        .cornerRadius(10)
+    //                        if task.isPressed {
+                                cardData(data: task)
+    //                        } else {
+//                                openncard(data: task)
+    //                        }
+                                }
+                            .offset(x: CGFloat(task.offset))
+                            .gesture(DragGesture() .updating($isDragging, body: {(value, state,_)  in
+                                state = true
+                                if value.translation.width < 0 && isDragging{
+                                    task.offset = Float(value.translation.width)
+                                }})
+//                                        .onChanged {value in  if value.translation.width < 0 {
+//                                task.offset = Float(value.translation.width)
+//                            }}
+                            .onEnded{value in withAnimation {
+                                withAnimation(.easeOut) {
+                                    if -value.translation.width >= 60  {
+                                       task.offset = -80
+                                   } else {
+                                       task.offset = 0
+                                           
+                                   }
+                                }
+                            }})
+                                .cornerRadius(10)
+                                .padding(.horizontal)
+                                .padding(.vertical,5)
+    //                            .onTapGesture {
+    //                                task.isPressed.toggle()
+    //                            }
+                                .foregroundColor(homeData.colorArray[Int(task.colorIndex)])
+                                .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
                             .shadow(color: .black.opacity(0.08), radius: 5, x: -5, y: -5)
+                        }
+                        .onTapGesture(perform: {
+                            task.offset = 0
+                        })
                         }
                     }
                         .navigationTitle("Сегодня")
             }
             }.onTapGesture {self.endTextEditing()}
+            
         }
     }
 }

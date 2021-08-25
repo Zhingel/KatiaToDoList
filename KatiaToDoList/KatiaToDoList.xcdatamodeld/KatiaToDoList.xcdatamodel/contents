@@ -5,10 +5,11 @@
         <attribute name="colorIndex" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="containerHeight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="isPressed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="offset" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="toDo" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="134"/>
     </elements>
 </model>
