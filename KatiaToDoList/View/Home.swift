@@ -140,12 +140,17 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                                     Rectangle()
                                         .foregroundColor(Color.white)
                                         .cornerRadius(10)
-    //                        if task.isPressed {
+                                        
+                        //   if task.isPressed == false {
                                 cardData(data: task)
-    //                        } else {
-//                                openncard(data: task)
-    //                        }
+//                            } else {
+//                               cardDataChange(data: task)
+//                           }
                                 }
+//                                    .onLongPressGesture(minimumDuration: 1.2) {
+//                                    task.isPressed = true
+//                                }
+                           
                             .offset(x: CGFloat(task.offset))
                             .gesture(DragGesture() .updating($isDragging, body: {(value, state,_)  in
                                 state = true
@@ -178,6 +183,7 @@ struct Home: View { @Environment(\.presentationMode) var presentationMode
                         .onTapGesture(perform: {
                             task.offset = 0
                         })
+                        
                         }
                     }
                         .navigationTitle("Сегодня")

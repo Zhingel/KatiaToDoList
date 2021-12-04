@@ -61,6 +61,8 @@ struct openncard: View {
                         }
                     }
                     .padding()
+                    
+                    
         }
 }
 
